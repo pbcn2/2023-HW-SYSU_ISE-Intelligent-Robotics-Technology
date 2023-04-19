@@ -117,7 +117,7 @@ plt.subplots_adjust(hspace=0.5, wspace=0.3)
 
 plt.figure(figsize=(12, 6))
 plot_function(f_0, tf, xlabel='t', ylabel='y', title='no.1 joint angle')
-plot_function(f_1, tf, xlabel='t', ylabel='y', title='no.2 joint angle')
+plot_function(f_1, tf, xlabel='t', ylabel='y', title='joint angle')
 plt.subplots_adjust(hspace=0.5)
 
 # Robot motion state diagram
@@ -135,3 +135,7 @@ for i in range(1, int(tf)+2):
     ax.plot([0, x1, x2], [0, y1, y2], marker='*')
 
 plt.show()
+
+print("规划函数如下：")
+print("theta_1(t) = ", a0[0], "+", a1[0], "t", "+", a2[0], "t^2", "+", a3[0], "t^3", "+", a4[0], "t^4", "+", a5[0], "t^5")
+print("theta_2(t) = ", a0[1], "+", a1[1], "t", "+", a2[1], "t^2", "+", a3[1], "t^3", "+", a4[1], "t^4", "+", a5[1], "t^5")
