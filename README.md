@@ -1,2 +1,24 @@
-# SYSU_no.4-Homework_Intelligent-Robotics-Technology
+# SYSU_Homework_Intelligent-Robotics-Technology
+## No.4 Homework
  The operation included the inverse kinematics of a 3R elbow robotic arm and path planning of a 2R planar robot using 5 polynomials
+
+## Grand Homework
+```
+mainFunction.m % 主函数，负责调用下述函数，并完成csv输出
+```
+
+```
+trajectoryGenerator.m  % 轨迹生成函数
+```
+
+```
+nextState.m  % 下一时刻位形计算函数
+```
+
+```
+controller.m  % 机器人控制器函数
+```
+
+**Attention: 执行顺序**
+- step1: run trajectoryGenerator.m
+- step2: run mainFunction.m (Do not clear data-zone before running this function)
