@@ -20,5 +20,5 @@ controller.m  % 机器人控制器函数
 ```
 
 **Attention: 执行顺序**
-- step1: run trajectoryGenerator.m
-- step2: run mainFunction.m (Do not clear data-zone before running this function)
+- step1: run `trajectoryGenerator.m` for *result_traj*
+- step2: run `mainFunction.m` ( !!! Do not clear data-zone before running this function )
