@@ -19,6 +19,6 @@ nextState.m  % 下一时刻位形计算函数
 controller.m  % 机器人控制器函数
 ```
 
-**Attention: 执行顺序**
-- step1: run `trajectoryGenerator.m` for *result_traj*
-- step2: run `mainFunction.m` ( !!! Do not clear data-zone before running this function )
+**Attention: 运行方式**
+
+- run `mainFunction.m` directly

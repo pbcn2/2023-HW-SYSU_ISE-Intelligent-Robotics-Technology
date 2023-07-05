@@ -3,7 +3,7 @@
 % STEP1
 % PUT YOUR CODE HERE! %
 % Call trajectory generator function to generate trajectory
-% trajectory = trajectoryGenerator();
+run trajectoryGenerator.m
 
 % STEP2
 % PUT YOUR CODE HERE! %
