@@ -12,38 +12,31 @@ Tseini = [-1  0  0  L1+L2;
            0  1  0  H1-H2;
            0  0  0  1;]; 
 % input 2: The desired configuration (test case 1) 
-Tsegoal = [-0.500 -0.500 -0.707  0.108;
-           -0.500 -0.500  0.707  0.379;
-           -0.707  0.707  0.000  0.725;
-            0.000  0.000  0.000  1.000;];
+% Tsegoal = [-0.500 -0.500 -0.707  0.108;
+%            -0.500 -0.500  0.707  0.379;
+%            -0.707  0.707  0.000  0.725;
+%             0.000  0.000  0.000  1.000;];
 % % input 2: The desired configuration (test case 2)
 % Tsegoal = [-0.491 -0.533 -0.689  0.372;
 %            -0.512 -0.463  0.723  0.589;
 %            -0.705  0.708 -0.046  0.358;
 %             0.000  0.000  0.000  1.000;];
-% input 2: use FK to calculate a valid conf
-Slist = [0   0   0   0      0      0;
-         0   1   1   1      0      1;
-         1   0   0   0     -1      0;
-         0  -H1 -H1 -H1    -W1     H2-H1;
-         0   0   0   0      L1+L2  0; 
-         0   0   L1  L1+L2  0      L1+L2];
-theta_d = [30; -45; -20; 0; 0; 0]*pi/180; % it has to be coloumn. Weird.
-Tsegoal = FKinSpace(Tseini, Slist, theta_d);
-% input 3
-k = 1;
-% time setp
-dt = 0.01; 
+Tsegoal = [-0.491 0.533 -0.689  0.372;
+           -0.512 0.463  0.723  0.589;
+           -0.705  0.708 -0.046  0.358;
+            0.000  0.000  0.000  1.000;];
+
+
 
 % ----------------------------- Traj Gen ----------------------------- %
-% Calculate the trajectory duration (Tf)
-Tf = norm(Tsegoal - Tseini) / k;
+% 轨迹持续时间
+Tf = 2;
 
 % Calculate the number of trajectory points (N)
-N = floor(Tf / dt);
+N = 100;
 
 % Set the trajectory generation method
-method = 3; % Use method 3 (cubic polynomial interpolation)
+method = 5; % Use method 3 (cubic polynomial interpolation)
 
 % Generate the trajectory
 result_traj = ScrewTrajectory(Tseini, Tsegoal, Tf, N, method);

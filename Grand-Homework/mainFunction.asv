@@ -47,8 +47,6 @@ Xdnext = result_traj{2}; % initialize (only use once)
 thetalist = [0; 0; 0; 0; 0; 0]; % 6x1 column vector
 current_conf = [0 0 0 0 0 0]; % 1x6 joint angles
 
-dt = 0.01;
-
 for i = 1:(N-2)
 % STEP5
 % PUT YOUR CODE HERE! %
